@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font: "Roboto", sans-serif;
+
+  --bg-color: #000;
+  --phandaliases: hsla(240, 6%, 51%, 1);
+  --text-color: hsla(0, 0%, 100%, 1);
+  --tertiary-color: hsla(355, 91%, 66%, 1);
+  --nocontent-color: hsla(189, 4%, 32%, 1);
+
+  --inputs-bg: hsla(191, 65%, 7%, 1);
+  --button-bg: hsla(195, 91%, 25%, 1);
+  --tableheader: hsla(194, 72%, 13%, 1);
+  --tableeven: hsla(192, 65%, 7%, 1);
+  --tableodd: rgba(6, 22, 27, 0.5);
+  --scroll-color: hsla(191, 31%, 42%, 1);
+
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+}
+
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body * {
+  font-family: var(--main-font);
+  font-weight: 400;
+}
+
+#app {
+  max-width: min(112rem, 80%);
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 12rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+header input {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  /* width: clamp(20rem, 25vw, 43rem); */
+  width: 32rem;
+  background-color: var(--inputs-bg);
+  color: var(--text-color);
+
+  line-height: 100%;
+}
+
+header input::placeholder {
+  color: var(--phandaliases);
+}
+
+header input:focus {
+  outline: 1px solid var(--text-color);
+}
+
+header button {
+  display: flex;
+  padding: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius: 0.5rem;
+  background-color: var(--button-bg);
+
+  border: none;
+
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.wrapper {
+  margin-top: 8.5rem;
+  width: 100%;
+  max-height: 70rem;
+  overflow-y: auto;
+  border-radius: 1.2rem;
+  border: 1px solid #4a808c;
+}
+
+.no-content {
+  /* display: none; */
+  height: 65rem;
+  width: 100%;
+  position: relative;
+}
+
+.no-content table {
+  position: absolute;
+}
+
+.no-content div {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  margin-left: -10rem;
+}
+
+.no-content span {
+  color: var(--nocontent-color);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  margin-top: 2rem;
+}
+
+.notdisplayed {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead th {
+  color: var(--text-color);
+  padding: 1.6rem 0 1.6rem 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: initial;
+
+  line-height: 160%; /* 32px */
+}
+
+table tr:nth-child(even) {
+  background-color: var(--tableeven);
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--tableodd);
+}
+
+table tbody tr {
+  border-top: 1px solid var(--button-bg);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 2.4rem 0 2.4rem 4rem;
+  gap: 1.6rem;
+}
+
+.user a {
+  text-decoration: none;
+}
+
+.user a span,
+.user a p {
+  color: var(--text-color);
+  font-size: 2rem;
+  line-height: 160%;
+}
+
+.user a p {
+  font-weight: 700;
+}
+
+.user img {
+  width: 6rem;
+  border-radius: 50%;
+}
+
+.repositories,
+.followers {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.followers,
+.repositories,
+.actions {
+  padding: 0 0 0 4rem;
+}
+
+.actions button {
+  background: none;
+  color: var(--tertiary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 160%;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    text-overflow: ellipsis;
+    overflow-x: visible;
+  }
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+  table thead th {
+    font-size: 1.5rem;
+    padding: 1.6rem 0 1.6rem 0;
+    text-align: center;
+  }
+
+  .user {
+    padding: 2.4rem 0;
+    flex-direction: column;
+  }
+
+  .followers,
+  .repositories,
+  .actions {
+    padding: 0;
+    text-align: center;
+  }
+
+  .user a p,
+  .user a span,
+  .followers,
+  .repositories,
+  .actions button {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #app {
+    max-width: 100%;
+  }
+}
