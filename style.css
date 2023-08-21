@@ -118,7 +118,7 @@ header button {
   background: transparent;
   display: block;
   max-height: 5px;
-  width: 4px;
+  width: 5px;
 }
 
 .wrapper::-webkit-scrollbar-track {
