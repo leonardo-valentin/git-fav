@@ -67,6 +67,7 @@ header input {
   padding: 1.5rem;
   border-radius: 0.5rem;
   border: none;
+  /* width: clamp(20rem, 25vw, 43rem); */
   width: 32rem;
   background-color: var(--inputs-bg);
   color: var(--text-color);
@@ -104,32 +105,10 @@ header button {
 .wrapper {
   margin-top: 8.5rem;
   width: 100%;
-  max-height: 60rem;
-  overflow: auto;
-  overflow: overlay;
+  max-height: 70rem;
+  overflow-y: auto;
   border-radius: 1.2rem;
   border: 1px solid #4a808c;
-
-  scrollbar-width: thin;
-  scrollbar-color: transparent;
-}
-
-.wrapper::-webkit-scrollbar {
-  background: transparent;
-  display: block;
-  max-height: 5px;
-  width: 4px;
-}
-
-.wrapper::-webkit-scrollbar-track {
-  background: transparent;
-  margin-block-start: 6rem;
-  margin-bottom: 5px;
-}
-
-.wrapper::-webkit-scrollbar-thumb {
-  border-radius: 2rem;
-  background: #4a808c;
 }
 
 .no-content {
