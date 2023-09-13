@@ -34,8 +34,9 @@ Após clonar o repositório, navegue até o diretório do projeto usando o segui
 
    ```bash
    cd gitfav
+   ```
 
-## Abrir a Aplicação
+**Abrir a Aplicação**
 Abra a aplicação no seu navegador preferido. Você pode fazer isso de várias maneiras, por exemplo:
 
 1. Duplo clique no arquivo index.html no explorador de arquivos.
@@ -43,11 +44,11 @@ Abra a aplicação no seu navegador preferido. Você pode fazer isso de várias 
 3. Use um servidor local, como o Live Server no Visual Studio Code.
 
 ## Adicionar Perfis Favoritos
-Na interface da aplicação, você verá um campo de entrada onde pode inserir o nome de usuário do GitHub que deseja adicionar.
+- Na interface da aplicação, você verá um campo de entrada onde pode inserir o nome de usuário do GitHub que deseja adicionar.
 
-Insira o nome de usuário e clique no botão "Favoritar". O perfil será adicionado à lista de favoritos.
+- Insira o nome de usuário e clique no botão "Favoritar". O perfil será adicionado à lista de favoritos.
 
-Visualizar na Tabela
-Depois de adicionar perfis favoritos, você poderá visualizá-los em uma tabela que mostra informações detalhadas, como a foto do usuário, nome, quantidade de repositórios públicos e seguidores.
+**Visualizar na Tabela**
+- Depois de adicionar perfis favoritos, você poderá visualizá-los em uma tabela que mostra informações detalhadas, como a foto do usuário, nome, quantidade de repositórios públicos e seguidores.
 
 Agora você pode começar a explorar e gerenciar seus perfis favoritos do GitHub usando o gitfav!
