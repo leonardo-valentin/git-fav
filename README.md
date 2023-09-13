@@ -32,8 +32,8 @@ link: git-fav-murex.vercel.app
 
 Após clonar o repositório, navegue até o diretório do projeto usando o seguinte comando:
 
-```bash
-cd gitfav```
+   ```bash
+   cd gitfav
 
 ## Abrir a Aplicação
 Abra a aplicação no seu navegador preferido. Você pode fazer isso de várias maneiras, por exemplo:
