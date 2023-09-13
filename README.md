@@ -27,6 +27,7 @@ link: git-fav-murex.vercel.app
 
    ```bash
    git clone https://github.com/seu-usuario/gitfav.git
+   ```
 
 2. **Navegar até o Diretório do Projeto**
 
